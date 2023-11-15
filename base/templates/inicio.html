@@ -34,16 +34,21 @@
                 <svg class="bi me-2" width="40" height="32">
                     <use xlink:href="#bootstrap" />
                 </svg>
-                <span class="fs-4">Pet Shop</span>
+                <span class="btn btn-primary ">Pet Shop</span>
             </a>
         </header>
 
         <main>
             {% block main %}
             <h1>Reserve o banho do seu PET</h1>
-
-            <a href="{% url 'contato' %}">Fale Conosco</a><br>
-            <a href="{% url 'reserva' %}">Reserve o Banho do seu Pet</a>
+            <div class="mb-5">
+                <p>Reserve o banho do seu Pet</p>
+                <a href="{% url 'reserva' %}" class="btn btn-primary btn-lg px-2">Clique aqui e reserve</a>
+            </div>
+            <div class="mb-5">
+                <p>Fale conosco</p>
+                <a href="{% url 'contato' %}" class="btn btn-primary btn-lg px-2">Fale Conosco</a>
+            </div>
             {% endblock main %}
         </main> 
         <footer class="pt-5 my-5 text-body-secondary border-top">

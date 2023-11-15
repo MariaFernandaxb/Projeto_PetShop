@@ -2,10 +2,16 @@
 {% load bootstrap5 %}
 
 {% block main %}
-    <h1>Fale conosco</h1>
+    <h1 class="text-body-emphasis">Fale conosco</h1>
 
-    <form method="post">
+    {% if sucesso %}
+        <p class="alert alert-success"> Mensagem enviada com sucesso </p>
+    {% endif %}
+    
+    <form action="" method="POST" id="form" novalidate>
         {% csrf_token %}
-        {% bootstrap_form formulario%}
+        {% bootstrap_form form %}
+        <button type="submit" class="btn btn-primary">Enviar</button>
     </form>
-{% endblock main%}
+{% endblock main %}
+
