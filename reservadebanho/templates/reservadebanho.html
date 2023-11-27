@@ -1,0 +1,16 @@
+{% extends 'inicio.html' %}
+{% load bootstrap5 %}
+
+{% block main %}
+    <h1> Reserve o banho do seu pet utilizando o formulário abaixo</h1>
+
+    {% if sucesso %}
+        <p class="alert alert-success">Sua reserva foi efetuada com sucesso !</p>
+    {% endif %}
+
+    <form action="" method="POST" id="form" novalidate>
+        {% csrf_token %}
+        {% bootstrap_form form %}
+        <button type="submit" class="btn btn-primary" >Enviar</button>
+    </form>
+{% endblock main %}

@@ -5,6 +5,7 @@ class Contato(models.Model):
     email = models.EmailField(max_length=50)
     mensagem = models.TextField(blank=True, null=True)
     data = models.DateField(auto_now_add=True)
+    lido = models.BooleanField(default=False, blank=True)
 
 class Reserva(models.Model):  
     nome_pet = models.CharField(max_length=50)
