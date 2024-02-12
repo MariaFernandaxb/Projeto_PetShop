@@ -24,5 +24,7 @@ urlpatterns = [
     path('reserva/', reserva, name='reserva'),
     path('reservadebanho/',include('reservadebanho.urls',namespace='reservadebanho')),
     path('admin/', admin.site.urls),
-    # path('reserva/', include('reserva.urls', namespace='reserva'))
+    # path('reservas/', include('reserva.urls', namespace='reservas')),
+    path('api-auth/', include('rest_framework.urls')),
+    path('api/', include('rest_api.urls', namespace='api')),
 ]
