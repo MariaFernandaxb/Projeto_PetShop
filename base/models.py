@@ -13,3 +13,9 @@ class Reserva(models.Model):
     data_reserva = models.DateField()
     observacoes = models.TextField(blank=True, null=True)
 
+class Funcionario(models.Model):  
+    nome = models.CharField(max_length=50)
+    cargo = models.CharField(max_length=10)
+    data_contrato = models.DateField()
+    salario = models.DecimalField(max_digits=10, decimal_places=2)
+
